@@ -10,7 +10,7 @@ body{
 }
   #contenedor_nav{
     box-sizing: border-box;
-    border: 2px solid black; /* Para ponerle borde a una caja */
+    border: 2px solid black;
     margin: 5px;
     padding: 5px;
    
@@ -45,15 +45,12 @@ body{
     display: flex;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: bold;
     margin-left: 20px;
     background-color: gray;
 }
 
 
 .navbar ul li a {
-    text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 13px;
     padding: 15px;
@@ -65,4 +62,60 @@ body{
     background-color: white;
     border-width: 1px;
     background-color: gray;
+}
+
+
+
+
+#contenedor_footer {
+    box-sizing: border-box;
+    border: 2px solid black; 
+    margin: 5px;
+    padding: 5px;
+    background-color: gray;
+}
+
+
+.footer_navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer_navbar ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+}
+
+
+.footer_navbar ul li {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 20px;
+    color: black;
+    background-color: gray;
+}
+
+.footer_navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.footer_navbar ul li span {
+    font-size: 13px;
+    color: black;
+    padding: 15px;
+    margin: 10px;
+}
+
+footer .logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
 }
