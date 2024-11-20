@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+   
+  }
+body{
+    background-color: gray;
+}
+  #contenedor_nav{
+    box-sizing: border-box;
+    border: 2px solid black; /* Para ponerle borde a una caja */
+    margin: 5px;
+    padding: 5px;
+   
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    
+}
+
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    background-color: gray;
+}
+
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    padding: 15px;
+    margin: 10px;
+    
+}
+
+.boton{
+    background-color: white;
+    border-width: 1px;
+    background-color: gray;
+}
