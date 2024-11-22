@@ -5,13 +5,12 @@
     text-decoration: none;
    
   }
-body{
-    background-color: gray;
-}
+
   #contenedor_nav{
     box-sizing: border-box;
     border: 2px solid black;
     margin: 5px;
+
     padding: 5px;
    
 }
@@ -25,6 +24,7 @@ body{
 .navbar{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 
 }
 
@@ -119,3 +119,75 @@ footer .logo {
     height: 70px;
     border-radius: 50%;
 }
+
+
+.body {
+margin: 0;
+padding: 0;
+background-color: grey;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: Arial, sans-serif;
+flex-wrap: wrap;
+flex-direction: column;
+afa
+}
+
+
+.container {
+display: flex;
+justify-content: space-around;
+background-color: white;
+padding: 30px;
+border-radius: 10px;
+max-width: 500px;
+width: 100%;
+flex-direction: column; 
+}
+
+
+.regis {
+text-align: center;
+color: black;
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.consultas {
+display: block;
+margin-top: 12px;
+font-weight: bold;
+color: rgb(75, 75, 75);
+}
+
+.preguntar {
+width: 100%;
+padding: 10px;
+}
+
+
+.invalid-feedback {
+color: red;
+font-size: 14px;
+margin-top: 5px;
+}
+
+.btn-btn-success {
+width: 100%;
+padding: 12px;
+background-color:black ;
+color: #fff;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.btn-btn-success:hover {
+background-color:blue;
+}
+

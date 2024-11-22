@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Validación de Formularios</title>
+		<link rel="stylesheet" href="./styles.css">
+	</head>
+	<body class="body">
+		<header>
+			<div id="contenedor_nav">
+				
+				<nav class="navbar">
+					<ul>
+						<li><img src="./img/download.png" alt="" class="logo"></li>
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="#">Categorías</a></li>
+						<li><a href="./login.html">Login</a></li>
+						<li><a href="./register.html">Registro</a></li>
+					 </ul>
+				</nav>
+			</div>
+		</header>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8">
+					<h2 class="regis">REGISTRATE</h2>
+					<form method="get" class="contact-form" action="./login.html">
+
+                    
+                      
+						<div class="form-group">
+							<label class="consultas" for="fullName" >Nombre completo</label>
+							<input class="preguntar" type="text" name="fullName" id="fullName" class="form-control">
+							<div class="invalid-feedback fullName"></div>
+						</div>
+						<div class="form-group">
+							<label class="consultas"  for="email">Correo electrónico</label>
+							<input  class="preguntar" type="email" name="email" id="email" >
+							<div class="invalid-feedback email"></div>
+						</div>
+
+						<div class="form-group">
+							<label class="consultas" for="password" >Contraseña</label>
+							<input class="preguntar" type="password" name="password" id="password" class="form-control">
+							<div class="invalid-feedback password"></div>
+						</div>
+
+                        <div class="form-group">
+                            <label class="consultas" for="terminos"> Acepto terminos y condiciones</label>
+                            <input  type="checkbox" name="terminos" id="terminos">
+                        </div>
+
+						
+				
+                    </div>    
+						<button type="submit" class="btn-btn-success">ENVIAR</button>
+						
+							<p class="consultas"><a href="./login.html">Ya tengo cuenta</a></p>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div id="contenedor_footer">
+				<nav class="footer_navbar">
+					<ul>
+						<li><img src="./img/download.png" alt="Logo" class="logo"></li>
+						<li><a href="#">Quiénes somos</a></li>
+						<li><a href="#">Contacto</a></li>
+						<li><span>Teléfono: +54 11 1234 5678</span></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+	<script src="./js/index.js"></script>
+	</body>
+</html>
