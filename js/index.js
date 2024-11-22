@@ -1,50 +1,53 @@
-let formulario = document.querySelector(".contact-form");
-
-let fullName = document.querySelector("#fullName");
-let email = document.querySelector("#email");
-let password = document.querySelector("#password");
-
-let errorFullName = document.querySelector(".fullName");
-let errorEmail = document.querySelector(".email");
-let errorPhone = document.querySelector(".phone");
-let errorPassword = document.querySelector(".password");
-
-let emptyErrorMessage = "Por favor complete el campo";
+let skipCounter = 0
 
 
+fetch("https://dummyjson.com/recipes")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    
+    let recetas = data.recipes;
+    let comidas = "";
+    let listaRecetas = document.querySelector(".lista_recetas");
+    
 
-let erroresBool = false;
+    for (let i = 0; i <= 10; i++) {
+      comidas += `
+        <article>
+          <img src="${recetas[i].image}" alt="${recetas[i].name}">
+          <h2>${recetas[i].name}</h2>
+          <p>Dificultad: ${recetas[i].difficulty}</p>
+          <a href="./detalle.html?id=${recetas[i].id}">Ver detalle</a>
+        </article>
+      `;
+    }
+
+    console.log(comidas);
+    listaRecetas.innerHTML  = comidas;
+
+    let cargarMas = document.querySelector("#cargar-mas")
+    let cargar = 10
+
+    cargarMas.addEventListener("click", function () {
+    let nuevasRecetas = ""
+      for (let i = cargar; i < (cargar + 10); i++) {
+        nuevasRecetas += `
+                        <article class="articles-recetas">
+                               <img src= ${recetas[i].image} alt=''>
+                                <h2>Name: ${recetas[i].name} </h2>
+                                <p>Difficulty: ${recetas[i].difficulty} </p>
+                         </article>
+                     `;
+      }
+    cargar += 10
+    listaRecetas.innerHTML += nuevasRecetas
+    });
 
 
-formulario.addEventListener("submit", function (event) {
-  event.preventDefault();
-  if (fullName.value == "") {
-    errorFullName.style.display = "block";
-    errorFullName.innerText = emptyErrorMessage;
-    erroresBool = true;
-  } else {
-    errorFullName.style.display = "none";
-  }
-  if (email.value == "") {
-    errorEmail.style.display = "block";
-    errorEmail.innerText = emptyErrorMessage;
-    erroresBool = true;
-  } else {
-    errorEmail.style.display = "none";
-  }
-  
-  if (password.value == "") {
-    errorPassword.style.display = "block";
-    errorPassword.innerText = emptyErrorMessage;
-    erroresBool = true;
-  } else {
-    errorPassword.style.display = "none";
-  }
-  
-
-  if (erroresBool == false) {
-    this.submit();
-  }
-});
+  })
+  .catch(function (error) {
+    console.log("Error: ", error);
+  });
 
 
