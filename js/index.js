@@ -12,7 +12,7 @@ fetch("https://dummyjson.com/recipes")
     let listaRecetas = document.querySelector(".lista_recetas");
     
 
-    for (let i = 0; i <= 10; i++) {
+    for (let i = 0; i < 10; i = i + 1) {
       comidas += `
         <article>
           <img src="${recetas[i].image}" alt="${recetas[i].name}">
