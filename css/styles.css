@@ -3,191 +3,148 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-   
-  }
-
-  #contenedor_nav{
-    box-sizing: border-box;
-    border: 2px solid black;
-    margin: 5px;
-
-    padding: 5px;
-   
 }
 
-.logo{
+#contenedor_nav, #contenedor_footer {
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+    background-color: gray;
+}
+
+.logo {
     width: 70px;
     height: 70px;
     border-radius: 50%;
 }
 
-.navbar{
+.navbar, .footer_navbar {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-
 }
 
-
-.navbar ul {
+.navbar ul, .footer_navbar ul {
+    display: flex;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    justify-content: space-between;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: gray;
-    
-}
-
-
-.navbar ul li {
-    display: flex;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    margin-left: 20px;
     background-color: gray;
 }
 
-
-.navbar ul li a {
-    color: rgb(0, 0, 0);
-    font-size: 13px;
-    padding: 15px;
-    margin: 10px;
-    
-}
-
-.boton{
-    background-color: white;
-    border-width: 1px;
-    background-color: gray;
-}
-
-/* todo lo de arriba es el estilo del header */
-
-
-#contenedor_footer {
-    box-sizing: border-box;
-    border: 2px solid black; 
-    margin: 5px;
-    padding: 5px;
-    background-color: gray;
-}
-
-
-.footer_navbar {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.footer_navbar ul {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: gray;
-}
-
-
-.footer_navbar ul li {
+.navbar ul li, .footer_navbar ul li {
     display: flex;
     align-items: center;
     font-weight: bold;
     margin-left: 20px;
     color: black;
+}
+
+.navbar ul li a, .footer_navbar ul li a {
+    font-size: 13px;
+    padding: 15px;
+    color: black;
+}
+
+.boton {
     background-color: gray;
+    border-width: 1px;
 }
-
-.footer_navbar ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 13px;
-    padding: 15px;
-    margin: 10px;
-}
-
-.footer_navbar ul li span {
-    font-size: 13px;
-    color: black;
-    padding: 15px;
-    margin: 10px;
-}
-
-footer .logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-}
-
 
 .body {
-margin: 0;
-padding: 0;
-background-color: grey;
-display: flex;
-justify-content: center;
-align-items: center;
-font-family: Arial, sans-serif;
-flex-wrap: wrap;
-flex-direction: column;
-afa
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
-
 
 .container {
-display: flex;
-justify-content: space-around;
-background-color: white;
-padding: 30px;
-border-radius: 10px;
-max-width: 500px;
-width: 100%;
-flex-direction: column; 
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    flex-direction: column;
 }
-
 
 .regis {
-text-align: center;
-color: black;
-font-size: 24px;
-margin-bottom: 20px;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-
-.form-group {
-margin-bottom: 20px;
-}
-
-.consultas {
-display: block;
-margin-top: 12px;
-font-weight: bold;
-color: rgb(75, 75, 75);
+.form-group, .consultas {
+    margin-bottom: 20px;
 }
 
 .preguntar {
-width: 100%;
-padding: 10px;
+    width: 100%;
+    padding: 10px;
 }
 
-
 .invalid-feedback {
-color: red;
-font-size: 14px;
-margin-top: 5px;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 .btn-btn-success {
-width: 100%;
-padding: 12px;
-background-color:black ;
-color: #fff;
-border-radius: 5px;
-font-size: 16px;
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.btn-btn-success:hover {
-background-color:blue;
+.lista_recetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
 }
 
+.lista_recetas article {
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.lista_recetas img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.lista_recetas h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.lista_recetas p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.lista_recetas a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#cargar-mas {
+    display: block;
+    margin: 20px auto;
+}

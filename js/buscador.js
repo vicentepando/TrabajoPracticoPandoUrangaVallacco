@@ -31,6 +31,3 @@ if(resultadoBuscador){
 }else{
     platos_buscador.innerHTML = `no se encontro la busqueda`;
 }
-
-
-
