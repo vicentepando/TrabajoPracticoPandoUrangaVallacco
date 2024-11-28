@@ -19,7 +19,8 @@ let erroresBool = false;
 formulario.addEventListener("submit", function (event) {
   event.preventDefault();
   if (fullName.value == "") {
-    errorFullName.style.display = "block";
+    
+    errorFullName.style.display = "block";  
     errorFullName.innerText = emptyErrorMessage;
     erroresBool = true;
   } else {
