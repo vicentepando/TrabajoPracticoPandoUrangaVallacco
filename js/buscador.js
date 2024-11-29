@@ -1,8 +1,10 @@
 let queryString = location.search;
 let objeto = new URLSearchParams( queryString)
 let resultadoBuscador = objeto.get("buscador");
+
 console.log(objeto)
 console.log(resultadoBuscador);
+
 let url =  `https://dummyjson.com/recipes/search?q=${resultadoBuscador}`;
 let comida_buscador = document.querySelector(".buscador_comidas");
 if(resultadoBuscador){
@@ -31,3 +33,26 @@ if(resultadoBuscador){
 }else{
     platos_buscador.innerHTML = `no se encontro la busqueda`;
 }
+
+const busqueda = document.querySelector('.b');
+const invalidFeedback = document.querySelector('.invalido');
+const formulario = document.querySelector('.main-buscador');
+
+formulario.addEventListener('submit', function (event) {
+  const valorBusqueda = busqueda.value;
+  let mensajeError = '';
+
+  if (busqueda.value === '') {
+    mensajeError = 'No completaste el campo de búsqueda';
+  } else if (busqueda.value.length < 3) {
+    mensajeError = 'Debes completar al menos 3 caracteres';
+  }
+
+  if (mensajeError) {
+    event.preventDefault();
+    invalidFeedback.innerHTML = mensajeError;
+    invalidFeedback.style.display = 'block';
+  } else {
+    invalidFeedback.style.display = 'none';
+  }
+});
