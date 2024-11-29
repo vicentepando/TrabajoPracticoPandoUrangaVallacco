@@ -5,6 +5,8 @@
     text-decoration: none;
 }
 
+
+/* CSS PARA HEADER Y FOOTER */
 #contenedor_nav, #contenedor_footer {
     border: 2px solid black;
     margin: 5px;
@@ -44,7 +46,10 @@
     padding: 15px;
     color: black;
 }
+/* CSS PARA HEADER Y FOOTER */
 
+
+/* CSS PARA LOGIN.HTML Y REGISTER.HTML */
 .boton {
     background-color: gray;
     border-width: 1px;
@@ -104,6 +109,10 @@
     font-size: 16px;
 }
 
+/* CSS PARA LOGIN.HTML Y REGISTER.HTML */
+
+
+ /* CSS PARA INDEX.HTML */
 .lista_recetas {
     display: flex;
     flex-wrap: wrap;
@@ -148,3 +157,6 @@
     display: block;
     margin: 20px auto;
 }
+
+ /* CSS PARA INDEX.HTML */
+

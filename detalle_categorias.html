@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Lista de Categorias</title>
 </head>
 <body>
+    <header>
+        <div id="contenedor_nav">
+            
+            <nav class="navbar">
+                <ul>
+                    <li><img src="./img/download.png" alt="" class="logo"></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./lista_categorias.html">Categorías</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./register.html">Registro</a></li>
+                    <li><form action="./busqueda.html" method="get">
+                        <input type="text" name="buscador" placeholder="Buscar aquí: ">
+                        <button type="submit" class="boton">BUSCAR</button>
+                    </form></li>
+                  
+                 </ul>
+            </nav>
+        </div>
+    </header>
     <main>
         <h1 class="titulo_categorias"> Recetas de la categoria </h1>
         <ul class="lista_categorias"></ul>

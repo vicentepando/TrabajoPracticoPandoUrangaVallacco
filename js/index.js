@@ -37,12 +37,17 @@ fetch("https://dummyjson.com/recipes")
                                <img src= ${recetas[i].image} alt=''>
                                 <h2>Name: ${recetas[i].name} </h2>
                                 <p>Difficulty: ${recetas[i].difficulty} </p>
+                                <a href="./detalle.html?id=${recetas[i].id}">Ver detalle</a>
+
                          </article>
                      `;
       }
     cargar += 10
     listaRecetas.innerHTML += nuevasRecetas
     });
+    if (cargar >= recetas.length) {
+      cargarMas.style.display = "none"; }
+
 
 
   })
