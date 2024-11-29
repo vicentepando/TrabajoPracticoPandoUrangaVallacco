@@ -9,8 +9,8 @@ fetch('https://dummyjson.com/recipes/tags')
     for (let i = 0; i < data.length; i++) {
         categoriasContainer.innerHTML += `
             <div class="categorias-item">
-                <h2>${data[i]}</h2>
-                <a href="detalle_categorias.html?category=${data[i]}" class="view-recipes">Ver recetas</a>
+                <h2><a class="view-recipes" href="detalle_categorias.html?category=${data[i]}">${data[i]}</a></h2>
+        
             </div>
         `;
     }
