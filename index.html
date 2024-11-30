@@ -14,12 +14,18 @@
             <ul>
                 <li><img src="./img/download.png" alt="" class="logo"></li>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./lista_categorias.html">Categorías</a></li>
+                <li><a href="./categorias.html">Categorías</a></li>
                 <li><a href="./login.html">Login</a></li>
                 <li><a href="./register.html">Registro</a></li>
-                <li><form action="./busqueda.html" method="get">
-                    <input type="text" name="buscador" placeholder="Buscar aquí: ">
-                    <button type="submit" class="boton">BUSCAR</button>
+                <li><section class="search-container">
+
+                    <form class="buscador" action="./busqueda.html" method="get">
+                        <input class="b" type="text" name="q" placeholder="Buscar">
+                        <button class="btn" type="submit">Buscar</button>
+                        <div class="invalid-feedback"></div>
+                    </form>
+            
+                </section>
                 </form></li>
               
              </ul>

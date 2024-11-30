@@ -20,12 +20,15 @@ fetch(`https://dummyjson.com/recipes/${id}`)
         tiempo.innerText += data.cookTimeMinutes;
         imagen.src = data.image;
 
+        let texto = document.querySelector(".instrucciones_receta");
+        texto.style.maxWidth = "80%"
+        texto.style.maring = "30px 30px"
+
+
+
+
 
     })
     .catch(function (error) {
-        console.log("error: ", error);
-    });
-
-
-
-
+        console.log("error: ", error);
+    });

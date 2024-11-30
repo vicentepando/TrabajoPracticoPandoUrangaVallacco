@@ -1,45 +1,47 @@
 let queryString = location.search;
-let objeto = new URLSearchParams( queryString)
-let resultadoBuscador = objeto.get("buscador");
+let queryStringObj = new URLSearchParams(queryString);
+let id = queryStringObj.get('q'); 
 
-console.log(objeto)
-console.log(resultadoBuscador);
+let resultado = document.querySelector('.result');
+let resultTitle = document.querySelector('.result-title');
+let allRecipes = [];
 
-let url =  `https://dummyjson.com/recipes/search?q=${resultadoBuscador}`;
-let comida_buscador = document.querySelector(".buscador_comidas");
-if(resultadoBuscador){
-    fetch(url)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data){
-        let platos = data.recipes;
-        let lista_platos = "";
-        let platos_buscador = document.querySelector(".buscador_comidas");
-        for (let i = 0; i < platos.length; i++){
-            lista_platos += `
-                 <article>
-                       <img src= ${platos[i].image} alt=''>
-                        <p> <a href="./detalle.html?id=${platos[i].id}"> Name: ${platos[i].name} </a> </p>
-                 </article> 
-            `;
-        }
-        platos_buscador.innerHTML = lista_platos;
+fetch(`https://dummyjson.com/recipes/search?q=${id}`)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    allRecipes = data.recipes; 
 
-    })
-    .catch(function (error) {
-        console.log("error: ", error);
-    });
-}else{
-    platos_buscador.innerHTML = `no se encontro la busqueda`;
-}
+    if (!allRecipes || allRecipes.length === 0) {
+      resultado.innerHTML += "<p>No se encontraron coincidencias.</p>";
+      return;
+    }
 
-const busqueda = document.querySelector('.b');
-const invalidFeedback = document.querySelector('.invalido');
-const formulario = document.querySelector('.main-buscador');
+    for (let i = 0; i < allRecipes.length; i++) {
+      let recipe = allRecipes[i]; 
+      let recipeMarkup = `
+        <article>
+          <img class="img-r" src="${recipe.image}" alt="${recipe.name}">
+          <p><b>${recipe.name}</b></p>
+          <p>Nivel de dificultad: ${recipe.difficulty}</p>
+          <a href="receta.html?id=${recipe.id}">Ir al detalle</a>
+        </article>`;
+      resultado.innerHTML += recipeMarkup;
+    }
+    
+  })
+  .catch(function (error) {
+    console.error("Error: " + error);
+    resultado.innerHTML = "<p>Hubo un error al cargar los resultados. Por favor, intenta nuevamente.</p>";
+  });
+
+let busqueda = document.querySelector('.b');
+let invalidFeedback = document.querySelector('.invalid-feedback');
+let formulario = document.querySelector('.buscador');
 
 formulario.addEventListener('submit', function (event) {
-  const valorBusqueda = busqueda.value;
+  let valorBusqueda = busqueda.value;
   let mensajeError = '';
 
   if (busqueda.value === '') {
@@ -53,6 +55,6 @@ formulario.addEventListener('submit', function (event) {
     invalidFeedback.innerHTML = mensajeError;
     invalidFeedback.style.display = 'block';
   } else {
-    invalidFeedback.style.display = 'none';
-  }
+    invalidFeedback.style.display = 'none';
+  }
 });

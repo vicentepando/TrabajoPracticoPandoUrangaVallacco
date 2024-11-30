@@ -18,7 +18,7 @@ fetch("https://dummyjson.com/recipes")
           <img src="${recetas[i].image}" alt="${recetas[i].name}">
           <h2>${recetas[i].name}</h2>
           <p>Dificultad: ${recetas[i].difficulty}</p>
-          <a href="./detalle.html?id=${recetas[i].id}">Ver detalle</a>
+          <a href="./recetas.html?id=${recetas[i].id}">Ver detalle</a>
         </article>
       `;
     }

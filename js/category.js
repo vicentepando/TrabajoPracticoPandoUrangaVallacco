@@ -6,6 +6,8 @@ let category = queryStringObjeto.get("category")
 let containerRecetas = document.querySelector(".lista_categorias")
 let titulo = document.querySelector("h1")
 titulo.innerText += `${category}`;
+
+
 fetch(`https://dummyjson.com/recipes/tag/${category}`)
 .then(function(response){
     return response.json();
@@ -20,8 +22,8 @@ fetch(`https://dummyjson.com/recipes/tag/${category}`)
         <img src= ${recetas[i].image}>
         <p> ${recetas[i].difficulty} </p>
         <p> 
-            <a href="detalle.html?id=${recetas[i].id}">Ver detalles </a>
+            <a href="recetas.html?id=${recetas[i].id}">Ver detalles </a>
          </p>
         </article>`
-    }
+    }
 })

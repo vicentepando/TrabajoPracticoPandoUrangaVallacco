@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>buscador</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -17,20 +17,27 @@
                     <li><a href="#">Categorías</a></li>
                     <li><a href="./login.html">Login</a></li>
                     <li><a href="./register.html">Registro</a></li>
-                    <li><form action="./busqueda.html" method="get" class="main-buscador">
-                        <input class="b" type="text" name="buscador" placeholder="Buscar aquí: ">
-                        <button type="submit" class="boton">BUSCAR</button>
-                    <div class="invalido"></div>
-                    </form></li>
+                    <li> <section class="search-container">
+
+                        <form class="buscador" action="./busqueda.html" method="get">
+                            <input class="b" type="text" name="q" placeholder="Buscar">
+                            <button class="btn" type="submit">Buscar</button>
+                            <div class="invalid-feedback"></div>
+                        </form>
+                
+                    </section>
+        </li>
                   
                  </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section 
-        class= "buscador_comidas lista_recetas">
-        </section>
+        <h1 class="tituloResult">Resultados de búsqueda</h1>
+        <p id="search-term"></p> 
+
+        <div class="result-title"></div>
+        <section class="result" id="results-container"></section> 
     </main>
     <footer>
         <div id="contenedor_footer">
